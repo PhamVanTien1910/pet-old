@@ -1,0 +1,11 @@
+package com.tienpv.petcare.infrastructure.converter;
+
+import com.tienpv.petcare.application.dto.request.PermissionRequest;
+import com.tienpv.petcare.application.dto.response.PermissionResponse;
+import com.tienpv.petcare.domain.entity.PermissionEntity;
+
+public interface IPermissionConverter {
+    PermissionEntity toEntity(PermissionRequest dto);
+
+    PermissionResponse toDTO(PermissionEntity entity);
+}
