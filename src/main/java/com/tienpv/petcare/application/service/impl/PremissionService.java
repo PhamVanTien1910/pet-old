@@ -2,7 +2,7 @@ package com.tienpv.petcare.application.service.impl;
 
 import com.tienpv.petcare.application.dto.request.PermissionRequest;
 import com.tienpv.petcare.application.dto.response.PermissionResponse;
-import com.tienpv.petcare.domain.entity.PermissionEntity;
+import com.tienpv.petcare.domain.entity.auth.PermissionEntity;
 import com.tienpv.petcare.domain.repository.IPermissionRepository;
 import com.tienpv.petcare.domain.service.IPermissionService;
 import com.tienpv.petcare.infrastructure.converter.IPermissionConverter;

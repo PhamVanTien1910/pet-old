@@ -3,7 +3,7 @@ package com.tienpv.petcare.infrastructure.converter.impl;
 import com.tienpv.petcare.application.dto.request.RoleRequest;
 import com.tienpv.petcare.application.dto.response.PermissionResponse;
 import com.tienpv.petcare.application.dto.response.RoleResponse;
-import com.tienpv.petcare.domain.entity.RoleEntity;
+import com.tienpv.petcare.domain.entity.auth.RoleEntity;
 import com.tienpv.petcare.infrastructure.converter.IPermissionConverter;
 import com.tienpv.petcare.infrastructure.converter.IRoleConverter;
 import org.springframework.beans.factory.annotation.Autowired;

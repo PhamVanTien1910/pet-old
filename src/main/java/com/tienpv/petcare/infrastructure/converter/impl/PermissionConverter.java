@@ -2,7 +2,7 @@ package com.tienpv.petcare.infrastructure.converter.impl;
 
 import com.tienpv.petcare.application.dto.request.PermissionRequest;
 import com.tienpv.petcare.application.dto.response.PermissionResponse;
-import com.tienpv.petcare.domain.entity.PermissionEntity;
+import com.tienpv.petcare.domain.entity.auth.PermissionEntity;
 import com.tienpv.petcare.infrastructure.converter.IPermissionConverter;
 import org.springframework.stereotype.Component;
 
