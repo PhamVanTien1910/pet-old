@@ -1,4 +1,4 @@
-package com.tienpv.petcare.domain.entity;
+package com.tienpv.petcare.domain.entity.auth;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

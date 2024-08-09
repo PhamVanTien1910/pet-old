@@ -2,8 +2,8 @@ package com.tienpv.petcare.application.service.impl;
 
 import com.tienpv.petcare.application.dto.request.RoleRequest;
 import com.tienpv.petcare.application.dto.response.RoleResponse;
-import com.tienpv.petcare.domain.entity.PermissionEntity;
-import com.tienpv.petcare.domain.entity.RoleEntity;
+import com.tienpv.petcare.domain.entity.auth.PermissionEntity;
+import com.tienpv.petcare.domain.entity.auth.RoleEntity;
 import com.tienpv.petcare.domain.repository.IPermissionRepository;
 import com.tienpv.petcare.domain.repository.RoleRepository;
 import com.tienpv.petcare.domain.service.IRoleService;

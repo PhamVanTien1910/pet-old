@@ -2,7 +2,7 @@ package com.tienpv.petcare.infrastructure.converter;
 
 import com.tienpv.petcare.application.dto.request.RoleRequest;
 import com.tienpv.petcare.application.dto.response.RoleResponse;
-import com.tienpv.petcare.domain.entity.RoleEntity;
+import com.tienpv.petcare.domain.entity.auth.RoleEntity;
 
 
 public interface IRoleConverter {

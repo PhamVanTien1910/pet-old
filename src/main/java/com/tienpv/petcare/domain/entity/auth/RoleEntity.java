@@ -1,5 +1,6 @@
-package com.tienpv.petcare.domain.entity;
+package com.tienpv.petcare.domain.entity.auth;
 
+import com.tienpv.petcare.domain.entity.UserEntity;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -1,9 +1,12 @@
 package com.tienpv.petcare.domain.entity;
 
+import com.tienpv.petcare.domain.entity.auth.RoleEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -30,4 +33,10 @@ public class UserEntity extends BaseEntity {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_name"))
     private Set<RoleEntity> roles = new HashSet<>();
+
+    @OneToMany(mappedBy = "user")
+    private List<CommentEntity> comments = new ArrayList<>();
+
+    @OneToMany(mappedBy = "user")
+    private List<PostEntity> posts = new ArrayList<>();
 }

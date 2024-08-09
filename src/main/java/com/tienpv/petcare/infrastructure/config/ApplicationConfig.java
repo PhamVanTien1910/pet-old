@@ -1,7 +1,7 @@
 package com.tienpv.petcare.infrastructure.config;
 
 import com.tienpv.petcare.domain.constant.PredefineRole;
-import com.tienpv.petcare.domain.entity.RoleEntity;
+import com.tienpv.petcare.domain.entity.auth.RoleEntity;
 import com.tienpv.petcare.domain.entity.UserEntity;
 import com.tienpv.petcare.domain.repository.IUserRepository;
 import com.tienpv.petcare.domain.repository.RoleRepository;
