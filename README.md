@@ -1,5 +1,19 @@
 # PETCARE APP
-
+- **Authentication and Authoraizaion with JWT**
+- **Manage pet health information and vaccination history**: 
+  + Create new pet information
+  + Update pet information
+  + Create new vaccination history for pets
+  + Update vaccination history
+- **Search for and schedule appointments with veterinarians**:
+  + Search for veterinarians by area and specialty...
+  + Schedule an appointment with a veterinarian
+  + Retrieve the list of appointments
+- **Communicate and share pet care experiences**:
+  + Create a post to share experiences
+  + Retrieve the list of posts
+  + Add a comment
+  + Retrieve the list of comments
 ## Technologies Used
 
 - **Spring Boot (v3.2.2)**: Simplifies the development of Spring applications.

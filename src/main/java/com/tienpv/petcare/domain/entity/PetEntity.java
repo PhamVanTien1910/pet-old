@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -30,10 +29,10 @@ public class PetEntity extends BaseEntity {
     private String gender;
 
     @Column
-    private String condition;
+    private String wellness;
 
     @Column
-    private Date birthdate;
+    private String birthdate;
 
     @OneToMany(mappedBy = "pets")
     private List<VaccinationEntity> vaccinations = new ArrayList<>();
