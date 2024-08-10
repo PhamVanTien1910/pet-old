@@ -48,4 +48,28 @@ public class VaccinationService implements IVaccinationService {
         response.setPetName(petEntity.getName());
         return response;
     }
+
+    @Override
+    public VaccinationResponse update(VaccinationRequest request) {
+        VaccinationEntity entity = new VaccinationEntity();
+        PetEntity petEntity = new PetEntity();
+        entity = vaccinationConverter.toEntity(request);
+        if (request.getPetId() != null){
+            petEntity = petRepository.findOneById(request.getPetId());
+            if( petEntity == null) {
+                throw new AppException(ErrorCode.ID_NOT_EXISTED);
+            }
+            if(request.getId() != null){
+             VaccinationEntity oldentity = vaccinationRepository.findById(request.getId())
+                                              .orElseThrow(() -> new AppException(ErrorCode.ID_NOT_EXISTED));
+             oldentity.setPets(petEntity);
+             entity = vaccinationConverter.toUpdateEntity(request, oldentity);
+            }
+            entity = vaccinationRepository.save(entity);
+        }
+        VaccinationResponse response;
+        response = vaccinationConverter.toDTO(entity);
+        response.setPetName(petEntity.getName());
+        return response;
+    }
 }

@@ -7,6 +7,7 @@ import lombok.Setter;
 @Setter
 public class VaccinationRequest {
     private Long petId;
+    private Long id;
     private String vaccineName;
     private String dateAdministered;
     private String nextDueDate;
