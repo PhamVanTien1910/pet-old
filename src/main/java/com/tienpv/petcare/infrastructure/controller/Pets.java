@@ -1,13 +1,9 @@
 package com.tienpv.petcare.infrastructure.controller;
 
-import com.tienpv.petcare.application.dto.request.PermissionRequest;
 import com.tienpv.petcare.application.dto.request.PetRequest;
 import com.tienpv.petcare.application.dto.response.ApiResponse;
-import com.tienpv.petcare.application.dto.response.PermissionResponse;
 import com.tienpv.petcare.application.dto.response.PetResponse;
-import com.tienpv.petcare.domain.service.IPermissionService;
 import com.tienpv.petcare.domain.service.IPetSerivce;
-import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
