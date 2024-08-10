@@ -11,10 +11,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/pets")
@@ -32,4 +29,15 @@ public class Pets {
         apiResponse.setResult(data);
         return apiResponse;
     }
+
+    @SecurityRequirement(name = "Bearer Authentication")
+    @PutMapping(value = "/{id}")
+    ApiResponse<PetResponse> update(@RequestBody PetRequest request, @PathVariable("id") long id) {
+        ApiResponse<PetResponse> apiResponse = new ApiResponse<>();
+        request.setId(id);
+        PetResponse data = petSerivce.updatePet(request);
+        apiResponse.setResult(data);
+        return apiResponse;
+    }
+
 }

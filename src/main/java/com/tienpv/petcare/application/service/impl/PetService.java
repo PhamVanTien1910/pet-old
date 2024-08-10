@@ -12,6 +12,8 @@ import com.tienpv.petcare.infrastructure.converter.IPetConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class PetService implements IPetSerivce {
 
@@ -36,4 +38,17 @@ public class PetService implements IPetSerivce {
         }
     }
 
+    @Override
+    public PetResponse updatePet(PetRequest request) {
+        PetEntity entity = new PetEntity();
+        if (request.getId() != null) {
+            PetEntity oldPetEntity = petRepository.findById(request.getId())
+                    .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXISTED));
+            entity = petConverter.toUpdateEntity(request, oldPetEntity);
+            entity = petRepository.save(entity);
+        }else {
+            entity = petConverter.toEntity(request);
+        }
+        return petConverter.toDTO(entity);
+    }
 }

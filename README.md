@@ -1,4 +1,5 @@
 # PETCARE APP
+
 - **Authentication and Authoraizaion with JWT**
 - **Manage pet health information and vaccination history**: 
   + Create new pet information

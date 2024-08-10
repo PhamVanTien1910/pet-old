@@ -29,5 +29,5 @@ public class AppointmentEntity extends BaseEntity {
     private Integer status;
 
     @Column(name = "appointment_date")
-    private Date appointmentDate;
+    private String appointmentDate;
 }

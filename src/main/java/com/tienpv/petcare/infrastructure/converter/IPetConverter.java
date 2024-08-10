@@ -7,4 +7,5 @@ import com.tienpv.petcare.domain.entity.PetEntity;
 public interface IPetConverter {
     PetResponse toDTO(PetEntity entity);
     PetEntity toEntity(PetRequest request);
+    PetEntity toUpdateEntity(PetRequest request, PetEntity entity);
 }

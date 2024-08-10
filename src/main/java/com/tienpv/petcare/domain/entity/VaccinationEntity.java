@@ -21,7 +21,7 @@ public class VaccinationEntity extends BaseEntity {
     private String dateAdministered;
 
     @Column(name = "next_due_date")
-    private Date nextDueDate;
+    private String nextDueDate;
 
     @Column
     private String notes;
