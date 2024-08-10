@@ -4,6 +4,7 @@ import com.tienpv.petcare.application.dto.request.PetRequest;
 import com.tienpv.petcare.application.dto.response.ApiResponse;
 import com.tienpv.petcare.application.dto.response.PetResponse;
 import com.tienpv.petcare.domain.service.IPetSerivce;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ public class Pets {
     @Autowired
     private IPetSerivce petSerivce;
 
+    @Operation(summary = "Create pets", description = "Create pets")
     @SecurityRequirement(name = "Bearer Authentication")
     @PostMapping
     ApiResponse<PetResponse> create(@RequestBody PetRequest request) {
@@ -26,6 +28,7 @@ public class Pets {
         return apiResponse;
     }
 
+    @Operation(summary = "Update pets", description = "Update pets")
     @SecurityRequirement(name = "Bearer Authentication")
     @PutMapping(value = "/{id}")
     ApiResponse<PetResponse> update(@RequestBody PetRequest request, @PathVariable("id") long id) {

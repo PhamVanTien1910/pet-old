@@ -7,4 +7,5 @@ import com.tienpv.petcare.domain.entity.VaccinationEntity;
 public interface IVaccinationConverter {
     VaccinationResponse toDTO(VaccinationEntity entity);
     VaccinationEntity toEntity(VaccinationRequest request);
+    VaccinationEntity toUpdateEntity(VaccinationRequest request, VaccinationEntity entity);
 }

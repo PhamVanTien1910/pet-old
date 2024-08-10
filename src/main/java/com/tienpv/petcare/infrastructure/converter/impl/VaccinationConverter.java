@@ -9,6 +9,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class VaccinationConverter implements IVaccinationConverter {
     @Override
+    public VaccinationEntity toUpdateEntity(VaccinationRequest request, VaccinationEntity entity) {
+        entity.setVaccineName(request.getVaccineName());
+        entity.setNotes(request.getNotes());
+        entity.setDateAdministered(request.getDateAdministered());
+        entity.setNextDueDate(request.getNextDueDate());
+        return entity;
+    }
+
+    @Override
     public VaccinationResponse toDTO(VaccinationEntity entity) {
         VaccinationResponse response = new VaccinationResponse();
         response.setNotes(entity.getNotes());
