@@ -32,4 +32,15 @@ public class PetConverter implements IPetConverter {
         entity.setSpecies(request.getSpecies());
         return entity;
     }
+
+    @Override
+    public PetEntity toUpdateEntity(PetRequest request, PetEntity entity) {
+        entity.setName(request.getName());
+        entity.setGender(request.getGender());
+        entity.setBirthdate(request.getBirthdate());
+        entity.setBreed(request.getBreed());
+        entity.setWellness(request.getWellness());
+        entity.setSpecies(request.getSpecies());
+        return entity;
+    }
 }
