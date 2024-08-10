@@ -1,11 +1,11 @@
-package com.tienpv.petcare.application.service.impl;
+package com.tienpv.petcare.application.service.impl.admin;
 
 import com.tienpv.petcare.application.dto.request.PermissionRequest;
 import com.tienpv.petcare.application.dto.response.PermissionResponse;
 import com.tienpv.petcare.domain.entity.auth.PermissionEntity;
-import com.tienpv.petcare.domain.repository.IPermissionRepository;
-import com.tienpv.petcare.domain.service.IPermissionService;
-import com.tienpv.petcare.infrastructure.converter.IPermissionConverter;
+import com.tienpv.petcare.domain.repository.admin.IPermissionRepository;
+import com.tienpv.petcare.domain.service.admin.IPermissionService;
+import com.tienpv.petcare.infrastructure.converter.admin.IPermissionConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
@@ -23,6 +23,7 @@ public class PremissionService implements IPermissionService {
     private IPermissionConverter converter;
 
     @Override
+    @PreAuthorize("hasRole('ADMIN')")
     public PermissionResponse create(PermissionRequest request) {
         PermissionEntity permissionEntity = converter.toEntity(request);
         permissionEntity = permissionRepository.save(permissionEntity);
@@ -37,6 +38,7 @@ public class PremissionService implements IPermissionService {
     }
 
     @Override
+    @PreAuthorize("hasRole('ADMIN')")
     public void delete(String permission) {
         permissionRepository.deleteById(permission);
     }

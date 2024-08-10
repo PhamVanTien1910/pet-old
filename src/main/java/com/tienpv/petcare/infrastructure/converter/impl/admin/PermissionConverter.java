@@ -1,9 +1,9 @@
-package com.tienpv.petcare.infrastructure.converter.impl;
+package com.tienpv.petcare.infrastructure.converter.impl.admin;
 
 import com.tienpv.petcare.application.dto.request.PermissionRequest;
 import com.tienpv.petcare.application.dto.response.PermissionResponse;
 import com.tienpv.petcare.domain.entity.auth.PermissionEntity;
-import com.tienpv.petcare.infrastructure.converter.IPermissionConverter;
+import com.tienpv.petcare.infrastructure.converter.admin.IPermissionConverter;
 import org.springframework.stereotype.Component;
 
 @Component

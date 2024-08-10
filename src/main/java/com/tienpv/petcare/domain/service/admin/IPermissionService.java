@@ -1,4 +1,4 @@
-package com.tienpv.petcare.domain.service;
+package com.tienpv.petcare.domain.service.admin;
 
 import com.tienpv.petcare.application.dto.request.PermissionRequest;
 import com.tienpv.petcare.application.dto.response.PermissionResponse;

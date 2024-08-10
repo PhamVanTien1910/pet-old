@@ -1,4 +1,4 @@
-package com.tienpv.petcare.infrastructure.converter;
+package com.tienpv.petcare.infrastructure.converter.admin;
 
 import com.tienpv.petcare.application.dto.request.RoleRequest;
 import com.tienpv.petcare.application.dto.response.RoleResponse;

@@ -4,7 +4,7 @@ import com.tienpv.petcare.domain.constant.PredefineRole;
 import com.tienpv.petcare.domain.entity.auth.RoleEntity;
 import com.tienpv.petcare.domain.entity.UserEntity;
 import com.tienpv.petcare.domain.repository.IUserRepository;
-import com.tienpv.petcare.domain.repository.RoleRepository;
+import com.tienpv.petcare.domain.repository.admin.RoleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationRunner;

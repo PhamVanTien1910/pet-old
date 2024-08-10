@@ -1,9 +1,9 @@
-package com.tienpv.petcare.infrastructure.controller;
+package com.tienpv.petcare.infrastructure.controller.admin;
 
 import com.tienpv.petcare.application.dto.request.RoleRequest;
 import com.tienpv.petcare.application.dto.response.ApiResponse;
 import com.tienpv.petcare.application.dto.response.RoleResponse;
-import com.tienpv.petcare.domain.service.IRoleService;
+import com.tienpv.petcare.domain.service.admin.IRoleService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

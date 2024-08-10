@@ -1,9 +1,9 @@
-package com.tienpv.petcare.infrastructure.controller;
+package com.tienpv.petcare.infrastructure.controller.admin;
 
 import com.tienpv.petcare.application.dto.request.PermissionRequest;
 import com.tienpv.petcare.application.dto.response.ApiResponse;
 import com.tienpv.petcare.application.dto.response.PermissionResponse;
-import com.tienpv.petcare.domain.service.IPermissionService;
+import com.tienpv.petcare.domain.service.admin.IPermissionService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;

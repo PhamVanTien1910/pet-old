@@ -21,7 +21,7 @@ import com.tienpv.petcare.domain.entity.auth.TokenEntity;
 import com.tienpv.petcare.domain.entity.UserEntity;
 import com.tienpv.petcare.domain.repository.IUserRepository;
 import com.tienpv.petcare.domain.repository.InvalidatedTokenRepository;
-import com.tienpv.petcare.domain.repository.RoleRepository;
+import com.tienpv.petcare.domain.repository.admin.RoleRepository;
 import com.tienpv.petcare.domain.service.IAuthenticationService;
 import com.tienpv.petcare.infrastructure.converter.IAuthenticationConverter;
 import lombok.RequiredArgsConstructor;
